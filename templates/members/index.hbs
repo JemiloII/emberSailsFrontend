@@ -1,0 +1,5 @@
+<h2>Members</h2>
+<nav>{{#link-to 'members.new'}}New{{/link-to}}</nav>
+{{#each}}
+	<p>{{#link-to 'members.show' id}} {{type}}: {{username}} {{/link-to}}</p>
+{{/each}}

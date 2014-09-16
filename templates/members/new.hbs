@@ -1,0 +1,14 @@
+<h2>New Member</h2>
+<p>{{model.username}} {{model.type}}</p>
+{{input 
+	name="username" 
+	placeholder="Enter Username..."
+	value=username
+}}
+{{view Ember.Select
+   content=types
+   value=selectedType
+   selectionBinding="model.type"
+   prompt="Account type"
+}}
+<button {{action create target="controller"}} >Submit</button>

@@ -1,0 +1,10 @@
+<h2>Edit {{type}}: {{username}}</h2>
+{{view Ember.TextField type="hidden" value=id}}
+{{input value=username}}
+{{view Ember.Select
+   content=types
+   value=type
+   selectionBinding="model.type"
+   prompt="Account type"
+}}
+<button {{action update target="controller"}} >Submit</button>

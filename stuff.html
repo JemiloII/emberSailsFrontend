@@ -1,0 +1,47 @@
+<script type="text/x-handlebars">
+		<nav>
+			{{#link-to 'index'}}Home{{/link-to}} | 
+			{{#link-to 'members'}}Members{{/link-to}} | 
+			{{#link-to 'about'}}About{{/link-to}}
+		</nav>
+		<h1>Hello World!</h1>
+
+		{{outlet}}
+	</script>
+
+	<script type="text/x-handlebars" id="index">
+		<h2>Home</h2>
+	</script>
+
+	<script type="text/x-handlebars" id="members/index">
+		<h2>Members</h2>
+		<nav>{{#link-to 'members.new'}}New{{/link-to}}</nav>
+		{{#each}}
+			<p>Member: {{username}} Type: {{type}}</p>
+		{{/each}}
+	</script>
+
+	<script type="text/x-handlebars" id="members/new">
+		<h2>New Member</h2>
+		<p>{{model.username}} {{model.type}}</p>
+		{{input 
+			name="username" 
+			placeholder="Enter Username..."
+			valueBinding="model.username"
+		}}
+		{{view Ember.Select
+	       content=types
+	       value=selectedType
+	       selectionBinding="model.type"
+	       prompt="Account type"
+		}}
+		<button {{action create target="controller"}} >Submit</button>
+	</script>
+
+	<script type="text/x-handlebars" id="member">
+		<h2>Single Member</h2>
+	</script>
+
+	<script type="text/x-handlebars" id="about">
+		<h2>About</h2>
+	</script>
