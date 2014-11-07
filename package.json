@@ -1,8 +1,8 @@
 {
-  "name": "thefancysnarks",
-  "description": "Website for the the fancy snarks!",
-  "private": true,
-  "version": "0.0.1",
+  "name": "emberSailsFrontend",
+  "description": "Boilerplate for an Ember Sails Project!",
+  "private": false,
+  "version": "1.0.1",
   "dependencies": {
     "ember-template-compiler": "^1.6.1",
     "grunt": "0.4.5",
@@ -14,5 +14,6 @@
     "grunt-ember-templates": "^0.4.21",
     "handlebars": "^1.3.0"
   },
-  "author": "jemiloii"
+  "author": "jemiloii",
+  "email": "jemiloii@jemiloii.com"
 }
